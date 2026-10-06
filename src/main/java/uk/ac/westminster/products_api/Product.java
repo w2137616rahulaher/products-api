@@ -17,6 +17,9 @@ public class Product {
 
 
 
+// restored the "Activity 3 — Break It, Live"
+// Reproduced the lecture demonstration one field at a time. This is the moment encapsulation clicks — do not skip it, even
+//though it feels destructive.
 
     public String getName() {
         return name;
