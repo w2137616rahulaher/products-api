@@ -15,28 +15,45 @@ package uk.ac.westminster.products_api;
  */
 public class Person {
 
-    private String name;
+    public String name;
 
     private String email;
 
+
+
+
+    //This is a default constructor
     public Person() {
     }
 
+
+    //This is a setter
     public Person(String name) {
 
         this.name = name;
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
+
+
+    //email getter and setter.
+
+
     public String getEmail() {
+
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
