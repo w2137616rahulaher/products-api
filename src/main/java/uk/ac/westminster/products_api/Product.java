@@ -1,7 +1,10 @@
 package uk.ac.westminster.products_api;
 
+import ch.qos.logback.classic.model.ConfigurationModel;
+
 public class Product {
 
+    public ConfigurationModel getId;
     private Long id;
     private String name;
     private double price;
@@ -32,4 +35,17 @@ public class Product {
     public Long getId() {
         return id;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
 }
