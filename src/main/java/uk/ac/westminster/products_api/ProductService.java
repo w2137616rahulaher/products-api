@@ -45,4 +45,18 @@ public class ProductService {
     }
 
 
+
+    public ProductService() {
+        products.add(new DigitalProduct (
+                nextId++, "Clean Code (E-book)", 29.99,
+            "/download/clean-code.pdf", 4.2
+        ));
+
+        products.add(new PhysicalProduct (
+                nextId++, "Monitor", 2500.00, 5.4, "61cm x 41cm x 18cm"
+        ));
+
+
+    }
+
 }
