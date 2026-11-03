@@ -55,8 +55,20 @@ public class ProductService {
         products.add(new PhysicalProduct (
                 nextId++, "Monitor", 2500.00, 5.4, "61cm x 41cm x 18cm"
         ));
-
-
     }
+    public List<String> getAllSummaries() {
+        List<String> summaries = new ArrayList<>();
+
+        for (Product p : products) {
+            if (p instanceof Discountable d) {
+                d.applyDiscount(0.10);
+            }
+            summaries.add(p.getSummary());
+        }
+
+        return summaries;
+    }
+
+
 
 }

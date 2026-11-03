@@ -2,9 +2,10 @@ package uk.ac.westminster.products_api;
 
 import ch.qos.logback.classic.model.ConfigurationModel;
 
-public class Product {
+public abstract class Product {
 
     public ConfigurationModel getId;
+    protected double discountedPrice;
     private Long id;
     private String name;
     private double price;
@@ -48,4 +49,9 @@ public class Product {
         this.price = price;
     }
 
+    public abstract String getSummary();
+
+
+    public void applyDiscount(double v) {
+    }
 }

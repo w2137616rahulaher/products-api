@@ -14,7 +14,12 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public Product getById(@PathVariable Long id) {
-        return new Product (id, "Laptop", 999.99);
+        return new Product(id, "Laptop", 999.99) {
+            @Override
+            public String getSummary() {
+                return "";
+            }
+        };
     }
 
     @Autowired
@@ -46,5 +51,11 @@ public class ProductController {
     public List<Product> search(@RequestParam String name) {
         return productService.findByName(name);
     }
+
+    @GetMapping("/products/summaries")
+    public List<String> getSummaries() {
+        return productService.getAllSummaries();
+    }
+
 
 }
